@@ -7,9 +7,9 @@
 #|_|\_\___| \_/ \__,_|_|_|  |_|/_/     |_|
 
 
-cd libglvnd-git && env _compiler=2 makepkg -si && cd ..
+cd libglvnd-git && env _compiler=2 makepkg -si --noconfirm && cd ..
 
-cd lib32-libglvnd-git && env _compiler=2 makepkg -si && cd ..
+cd lib32-libglvnd-git && env _compiler=2 makepkg -si --noconfirm && cd ..
 
 # make a copy of every pkg in package-$(date -I)/ dir
 
