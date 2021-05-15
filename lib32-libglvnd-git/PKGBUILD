@@ -63,6 +63,9 @@ cat >crossfile.ini <<END
 llvm-config = '/usr/bin/llvm-config32'
 END
 
+  # Fix for build error
+  sed -i "s/subdir('tests')/ /" meson.build
+
   # remove build dir if there is one
   if dir build_32; then
     rm -rf -v build_32

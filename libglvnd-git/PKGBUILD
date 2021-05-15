@@ -55,6 +55,9 @@ else
 fi
 
   cd libglvnd
+  
+  # Fix for build error
+  sed -i "s/subdir('tests')/ /" meson.build
 
   if dir build_64; then
     rm -rf -v build_64
